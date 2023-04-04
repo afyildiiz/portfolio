@@ -1,0 +1,22 @@
+*{
+    padding: 14px;
+}
+img{
+    width: 300px;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.card{
+    background: #464951;
+    border-radius: 25px;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    box-shadow: 4px 6px black;
+}
+
+.row img:hover{
+    transform: rotate(360deg);
+}

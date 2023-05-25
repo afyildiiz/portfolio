@@ -9,17 +9,22 @@
     // margin: 0;
     box-sizing: border-box;
 }
+
 .card{
   padding: 24px;
   background-color: #292727;
   border: 3px solid black;
-  box-shadow: 3px 6px;
+  box-shadow: 3px 5px;
+}
+.row,.col-lg-6{
+  padding: 8px;
 }
 
 .inputbox{
     position: relative;
 }
-.inputbox input{
+.inputbox input,textarea{
+  color: white;
     background-color: rgba(81, 74, 74, 0);
     width: 100%;
     padding: 10px;
@@ -35,14 +40,17 @@
     pointer-events: none;
     font-size: 1em;
     text-transform: uppercase;
-    color: rgb(233, 233, 233);
+    color: rgb(129, 126, 126);
     transition: 0.5s;
+    font-size: 0.9em;
   }
   .inputbox input:valid ~ span,
-  .inputbox input:focus ~ span
+  .inputbox input:focus ~ span,
+  .inputbox textarea:valid ~ span,
+  .inputbox textarea:focus ~ span
   {
     color: #ffffff;
-    transform: translateX(10px) translateY(-15px);
+    transform: translateX(6px) translateY(-20px);
     font-size: 0.6em;
     padding: 0 10px;
     // background-color: rgba(240, 237, 237, 0.93);

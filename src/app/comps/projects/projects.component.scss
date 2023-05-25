@@ -1,6 +1,12 @@
 // Colors
 $color-primary-white: rgb(240, 240, 240);
-
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
 .col-lg-3{
     margin:1%
 }

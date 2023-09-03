@@ -14,9 +14,9 @@ p{
   color: antiquewhite;
 }
 
-.flex-center{
-  padding: 10px;
-}
+// .flex-center{
+//   padding: 10px;
+// }
 a{
   text-decoration: none;
   color: wheat;
@@ -92,7 +92,7 @@ section{
 }
 *{
     // margin: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     
 }
 
@@ -141,4 +141,14 @@ section{
     padding: 0 10px;
     font-weight: 500;
     letter-spacing: 0.2em;
+  }
+
+
+  @media (max-width: 1200px) {
+    /* CSS seçici ile görüntüyü seçin ve pozisyonunu ve z-index değerini ayarlayın */
+    img {
+      position: relative; /* Görüntünün pozisyonunu belirliyoruz */
+      top: 20px; /* veya istediğiniz kadar kaydırma yapabilirsiniz */
+      z-index: -1; /* Görüntüyü diğer öğelerin altına taşır */
+    }
   }

@@ -62,26 +62,35 @@
 
 
 <section style="color: white;margin-top: 2rem;" id="section">
-  <div class="row justify-content-center">
-    <div class="col-4">
-      <div class="division">
-      <h1>contact</h1>
-      <p>get in touch with me via  social <br> media or email!</p>
+  <div class="row align-items-center">
+    <div class="col-md-7">
+      <div class="division text-center">
+        <h1>Contact</h1>
+        <p>Get in touch with me via social media or email!</p>
+        
+        <div class="social">
+          <a href="https://github.com/afyildiiz" target="_blank">
+            <i class="fa-brands fa-github fa-4x icon-3d"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/afyildiiz/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-4x icon-3d"></i>
+          </a>
+          <a href="https://www.instagram.com/afyildiiz/" target="_blank">
+            <i class="fa-brands fa-instagram fa-4x icon-3d"></i>
+          </a>
+          <a target="_blank" href="https://medium.com/@afyildiiz">
+            <i class="fa-brands fa-medium fa-4x icon-3d"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="flex-center social">
-      <a href="https://github.com/afyildiiz" target="_blank"><i class="fa-brands fa-github fa-4x icon-3d"></i></a>
-      <a href="https://www.linkedin.com/in/afyildiiz/" target="_blank"><i class="fa-brands fa-linkedin fa-4x icon-3d"></i></a>
-      <a href="https://www.instagram.com/afyildiiz/" target="_blank"><i class="fa-brands fa-instagram fa-4x icon-3d"></i></a>
-      <a target="_blank" href="https://medium.com/@afyildiiz"><i class="fa-brands fa-medium fa-4x icon-3d"></i></a>
-    </div>
-    </div>
-
-    <div class="col-3 ">
-      <img src="../../../assets/zfoto.png" style="height: 500px;" alt="fatih_yildiz">
+    <div class="col-md-5 text-center"> <!-- text-center sınıfı eklendi -->
+      <img src="../../../assets/AFY(3).png" style="height: auto; width: 300px;" alt="fatih_yildiz">
     </div>
   </div>
 </section>
+
 
 
 <div  style="padding: 50px ;">
@@ -117,7 +126,7 @@
           </div>
         </div>
       </div>
-      <button type="button" (click)="submitForm()" class="btn btn-primary" style="float:right" >send email</button>
+      <button type="button" (click)="sendEmail()" class="btn btn-primary" style="float:right" >send email</button>
     </form>
   </div>
 </div>

@@ -15,7 +15,7 @@ export class InfoComponent implements OnInit {
     const centerY = window.innerHeight / 2;
     const xOffset = (event.clientX - centerX) / centerX * 50;
     const yOffset = (event.clientY - centerY) / centerY * 50;
-    this.backgroundPosition = `${xOffset}% ${yOffset}%`;
+    this.backgroundPosition = `${50 + xOffset}% ${50 + yOffset}%`;
   }
   constructor() { 
   }

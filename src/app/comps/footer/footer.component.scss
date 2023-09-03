@@ -316,3 +316,14 @@ ul {
 		}
 	}
 }
+
+@media  (max-width:1000px){
+	.text-area{
+		position: relative;
+	}
+	#sticky-footer{
+		display: block;
+		position: relative;
+		z-index: -1;
+	}
+}

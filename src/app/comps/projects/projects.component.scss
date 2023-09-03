@@ -43,12 +43,14 @@ main {
   }
 
   h2 {
+    display: none;
     position: absolute;
     inset: auto auto 30px 30px;
     margin: 0;
     transition: inset .3s .3s ease-out;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: normal;
+    font-size: 18px;
     text-transform: uppercase;
     // font-size: 24px;
   }
@@ -71,6 +73,9 @@ main {
   }
   
   &:hover h2 {
+    display: block;
+
+
     inset: auto auto 80% 30px;
     // font-size: 15px;
     transition: inset .3s ease-out;
@@ -91,4 +96,24 @@ main {
 
 .material-symbols-outlined {
   vertical-align: middle;
+}
+
+
+.botas{
+  background:url('../../../assets/Botaslogo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+.iyv{
+  background:url('../../../assets/ilimyaymavakfi-logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+
+
+h4{
+  font-family: 'Press Start 2P', cursive;
 }

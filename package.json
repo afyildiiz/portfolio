@@ -1,9 +1,10 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
+  "proxyConfig": "proxy.config.json",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng serve\" \"cd C:/Users/afyil/Desktop/FATIH/projeler/portfolio/src && node app.js\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -33,7 +34,7 @@
     "@angular/cli": "~14.2.0",
     "@angular/compiler-cli": "^14.0.0-next.0",
     "@types/jasmine": "~4.0.0",
-    "concurrently": "^8.0.1",
+    "concurrently": "^8.2.1",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

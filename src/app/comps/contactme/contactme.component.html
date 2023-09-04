@@ -108,8 +108,14 @@
         </div>
         <div class="col-lg-6">
           <div class="inputbox ">
-            <input [(ngModel)]="e_mail" type="email"  required="required" [ngModelOptions]="{standalone: true}" />
+            <input [(ngModel)]="e_mail" type="text" id="email" required="required" [ngModelOptions]="{standalone: true}" />
             <span>E-mail</span>
+          </div>
+          <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">
+            E-posta alanı zorunludur.
+          </div>
+          <div *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+            Geçerli bir e-posta adresi girin.
           </div>
         </div>
       </div>

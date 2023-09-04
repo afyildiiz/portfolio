@@ -4,7 +4,7 @@
   "proxyConfig": "proxy.config.json",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"cd C:/Users/afyil/Desktop/FATIH/projeler/portfolio/src && node app.js\"",
+    "start": "concurrently \"ng serve\" \"cd /Users/a.fatihyildiz/Desktop/project/portfolio/src/ && node app.js\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -24,6 +24,7 @@
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.3.0-alpha1",
     "font-awesome": "^4.7.0",
+    "nodemailer": "^6.9.4",
     "rxjs": "~7.5.0",
     "smtpjs": "^0.0.1",
     "tslib": "^2.3.0",

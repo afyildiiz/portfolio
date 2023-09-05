@@ -23,3 +23,55 @@ html {
 
 
 
+
+
+
+
+
+.optionbox{
+  position: absolute;
+  right: 0;
+  transform: translate(-50%,-50%);
+}
+
+.optionbox select {
+    background: #acacac;
+    color: #fff;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 48px rgb(93, 15, 9);
+    -webkit-appearance: button;
+    outline: none;
+    cursor: pointer;
+}
+
+  @media screen and (max-width:1000px) {
+    .optionbox, .optionbox select{
+      left: 25%;
+      margin-top: 1em;
+      position: relative;
+    }
+    .optionbox:before,.optionbox:hover:before{
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -65,8 +65,8 @@
   <div class="row align-items-center">
     <div class="col-md-7">
       <div class="division text-center">
-        <h1>Contact</h1>
-        <p>Get in touch with me via social media or email!</p>
+        <h1>{{'Contact' | translate}}</h1>
+        <p>{{'Get in touch with me via social media or email' | translate}}!</p>
         
         <div class="social">
           <a href="https://github.com/afyildiiz" target="_blank">
@@ -103,7 +103,7 @@
         <div class="col-lg-6">
           <div class="inputbox ">
             <input [(ngModel)]="isim" type="text" required="required" [ngModelOptions]="{standalone: true}"/>
-            <span>Name </span>
+            <span>{{'Name' | translate}} </span>
           </div>
         </div>
         <div class="col-lg-6">
@@ -128,7 +128,7 @@
               required="required"
               [ngModelOptions]="{standalone: true}"
             ></textarea>
-            <span>Your Message</span>
+            <span>{{'Your Message' | translate}}</span>
           </div>
         </div>
       </div>

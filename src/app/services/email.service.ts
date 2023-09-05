@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { response } from 'express';
 
 import { map, Observable } from 'rxjs';
@@ -8,10 +9,15 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EmailService {
+  private selectedLanguage: string = localStorage.getItem('selectedLanguage') || 'en';
 
-  constructor(private http: HttpClient) {}
-
-  sendEmail(data: any) {
-    return this.http.post('http://localhost:3000/send-email', data);
+  getLanguage(): string {
+    return this.selectedLanguage;
   }
+
+  setLanguage(language: string): void {
+    this.selectedLanguage = language;
+    localStorage.setItem('selectedLanguage', language);
+  }
+
 }

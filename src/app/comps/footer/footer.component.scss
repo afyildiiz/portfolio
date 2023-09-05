@@ -317,6 +317,10 @@ ul {
 	}
 }
 
+.labelangboot{
+	width: 200px;
+}
+
 @media  (max-width:1000px){
 	.text-area{
 		position: relative;
@@ -326,4 +330,14 @@ ul {
 		position: relative;
 		z-index: -1;
 	}
+	.text-area{
+		margin-top: 1em;
+	}
+	.labelangboot{
+		width: 420px;
+	}
 }
+
+
+
+

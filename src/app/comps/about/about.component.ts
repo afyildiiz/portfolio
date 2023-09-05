@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  labelone='trying to learn all of things :)'
+  // labelone='trying to learn all of things :)'
   labelcoder='<coder>'
   constructor() { }
 

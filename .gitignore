@@ -41,7 +41,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#ignore the app file
+#ignore the app filee
 src/app.js
 
 # Local Netlify folder

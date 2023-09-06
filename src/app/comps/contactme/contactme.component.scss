@@ -24,13 +24,17 @@ a{
 }
 
 .icon-3d{
-  padding: 24px;
+  font-size: 100px;
+  padding: 50px;
   -webkit-animation: icon3d 200ms 10;
   animation: icon3d 200ms 10;
   color: #fff;
   &:hover {
     -webkit-animation: icon3d 200ms infinite;
           animation: icon3d 200ms infinite;
+          transition: 0.3s ease;
+          transform: scale(1.1); /* 1.1 kat büyütme (çok az büyütme) */
+      
   }
 }
 
@@ -66,6 +70,15 @@ a{
   }
 }
 
+.fa-sharp{
+  color: white;
+  transition: 0.3s all ease-in;
+  &:hover{
+    color: gray;
+  }
+}
+
+
 i{
     border-radius: 50%;
 
@@ -89,6 +102,10 @@ section{
     align-items: center;
     flex-direction: column;
     text-transform: uppercase;
+    color: rgb(45, 202, 160);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+
 }
 *{
     // margin: 0;
@@ -150,5 +167,15 @@ section{
       position: relative; /* Görüntünün pozisyonunu belirliyoruz */
       top: 20px; /* veya istediğiniz kadar kaydırma yapabilirsiniz */
       z-index: -1; /* Görüntüyü diğer öğelerin altına taşır */
+      // display: block;
+      // margin: 0 auto;
+    }
+    .division h1{
+      font-size: 35px;
+    }
+    .social{
+      flex-wrap: wrap;
     }
   }
+
+

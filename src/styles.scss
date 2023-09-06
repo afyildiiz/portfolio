@@ -8,3 +8,10 @@
 // }
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+.row{
+    width: 100%;
+    --bs-gutter-x: 0;
+
+}

@@ -6,10 +6,15 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  // box-sizing: inherit;
   padding: 0;
   margin: 0;
   letter-spacing: 1.1px;
+}
+
+.navbar{
+  // width: 100%;
+  // word-wrap:break-word;
 }
 
 
@@ -51,12 +56,19 @@ html {
   @media screen and (max-width:1000px) {
     .optionbox, .optionbox select{
       left: 25%;
-      margin-top: 1em;
+      margin-top: 1.5em;
       position: relative;
+      // width: 100px;
     }
     .optionbox:before,.optionbox:hover:before{
       display: none;
     }
+    .optionbox select{
+      width: 60px;
+      height: 35px;
+      font-size: 10px;
+    }
+
   }
 
 

@@ -19,4 +19,14 @@
   font-family: 'Press Start 2P', cursive;
     color: black;
   }
+
+  @media screen and (max-width:472px) {
+    .description p{
+      // padding: 24px;
+      font-size: 14px;
+      padding-left:10px;
+      padding-right:10px;
+      text-align: center;
+    }
+  }
   

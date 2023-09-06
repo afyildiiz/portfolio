@@ -10,6 +10,10 @@
 
 // }
 
+// section div{
+//   overflow-y: hidden;
+// }
+
 img {
     --_g: 10% / 45% 45% no-repeat linear-gradient(#000 0 0);
     --m: left var(--_i, 0%) top var(--_g),
@@ -25,6 +29,7 @@ img {
     &:hover {
       --_i: 10%;
     //   filter: grayscale(0);
+      
     }
   }
   
@@ -42,6 +47,8 @@ img {
 
 }
 
+
+
 p,h2,h1{
     // font-family: 'Rubik Iso', cursive;
     // font-family: 'Kablammo', cursive;
@@ -54,4 +61,20 @@ p,h2,h1{
 
   display: inline-block;
   width: 49%;
+}
+
+
+img{
+  width: 350px;
+}
+
+@media screen and (max-width:450px) {
+  .img img{
+    width: 250px
+
+  }
+  .text1, .text2{
+    font-size: 12px;
+  }
+
 }

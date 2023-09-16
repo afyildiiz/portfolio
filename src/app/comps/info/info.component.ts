@@ -13,8 +13,8 @@ export class InfoComponent implements OnInit {
   onMouseMove(event: MouseEvent) {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
-    const xOffset = (event.clientX - centerX) / centerX * 50;
-    const yOffset = (event.clientY - centerY) / centerY * 50;
+    const xOffset = (event.clientX - centerX) / centerX * 10;
+    const yOffset = (event.clientY - centerY) / centerY * 10;
     this.backgroundPosition = `${50 + xOffset}% ${50 + yOffset}%`;
   }
   constructor() { 

@@ -7,6 +7,13 @@ $color-primary-white: rgb(240, 240, 240);
   flex-direction: column;
   text-transform: uppercase;
 }
+
+@media screen and (max-width:535px) {
+  div .bot{
+    margin-bottom:2rem ;
+  }
+
+}
 @media screen and (max-width:387px) {
   .header h4{
     font-size: 14px;
@@ -113,6 +120,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100% 100%;
+
     &:hover{
       transition: 0.3s ease;
       transform: scale(1.1); /* 1.1 kat büyütme (çok az büyütme) */

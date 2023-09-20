@@ -19,5 +19,6 @@
     "Send Email":"Email Gönder",
     "send email":"email gönder",
     "Name":"Ad",
-    "Your Message":"Mesajınız"
+    "Your Message":"Mesajınız",
+    "*The e-mail must be written in the correct format!":"*E-mail doğru formatta yazılmalıdır!"
 }

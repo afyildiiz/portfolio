@@ -19,6 +19,9 @@ import { InfoComponent } from './comps/info/info.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/', '.json');
 }
@@ -42,6 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+
+    
 
     TranslateModule.forRoot({
       loader: {

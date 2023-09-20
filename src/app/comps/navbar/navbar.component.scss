@@ -57,6 +57,7 @@ html {
     .optionbox, .optionbox select{
       left: 25%;
       margin-top: 1.5em;
+      margin-left: 0.4em;
       position: relative;
       // width: 100px;
     }
@@ -67,6 +68,9 @@ html {
       width: 60px;
       height: 35px;
       font-size: 10px;
+    }
+    .nav-link{
+      margin: 0.45em;
     }
 
   }

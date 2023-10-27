@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Press+Start+2P&family=Rubik+Iso&display=swap');
 
 *{
-    padding: 14px;
+    padding: 10px;
 }
 // img{
 //     width: auto;
@@ -10,9 +10,10 @@
 
 // }
 
-// section div{
-//   overflow-y: hidden;
-// }
+section{
+  margin-top: 50px;
+  
+}
 
 img {
     --_g: 10% / 45% 45% no-repeat linear-gradient(#000 0 0);

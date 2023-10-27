@@ -117,7 +117,7 @@ section{
   padding: 24px;
   background-color: #999999;
   border: 2px solid black;
-  box-shadow: 3px 5px;
+  box-shadow: 3px 5px linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
 }
 .row,.col-lg-6{
   padding: 8px;
@@ -160,6 +160,20 @@ section{
     letter-spacing: 0.2em;
   }
 
+  img{
+    height: auto;
+     width: 250px;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px black;
+    transition: all 0.3s ease-in;
+  }
+  img:hover{
+    border: 1px solid black;
+    box-shadow: none;
+    transform: scale(1.1);
+  }
+
 
   @media (max-width: 1200px) {
     /* CSS seçici ile görüntüyü seçin ve pozisyonunu ve z-index değerini ayarlayın */
@@ -179,3 +193,7 @@ section{
   }
 
 
+
+  @media screen and (max-width:992px) {
+    .inputbox{margin-top: 1em;}
+  }

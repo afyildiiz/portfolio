@@ -1,38 +1,58 @@
-<nav class="navbar navbar-expand-lg navbar">
-  <a class="navbar-brand" href="#"><img style="width: 75px;" src="../../../assets/AFY(2).png" alt="">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse text-center justify-content-end" id="navbarNav">    
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <img src="../../../../assets/AFY(2).png" width="40px"  alt="">
+      <!-- <div class="switch-container">
+        <input class="switch-input" type="checkbox">
+        <div class="switch-button">
+          <div class="switch-button-inside">
+            <svg class="switch-icon off" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"/>
+            </svg>
+            <svg class="switch-icon on" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="7" width="12" height="2" rx="1"/>
+            </svg>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+      <a  href="#home">{{'home' | translate}}</a>
+      <a  href="#about">{{'about' | translate}}</a>
+      <a  href="#projects">{{'projects' | translate}}</a>
+      <a routerLinkActive="active" class="nav-link" routerLink="/contact">{{'contact' | translate}}</a>
+      <!-- <a  style="cursor: pointer;" (click)="logOut()">Çıkış</a> -->
+  </div>
+  <div class="nav-exit">
+    <div class="select">
+      <select [(ngModel)]="selectedLanguage" (change)="changeLanguage()">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <div class = "down_note"></div>
+  </div>
+
+  <!-- <div class=" navbar-collapse ">
     <ul class="navbar-nav">
-    <!-- <li class=" nav-item">
-      <a class="nav-link" href="#">afy</a>
-    </li> -->
-    <li class="nav-item">
-      <a class="nav-link" href="#home">{{'home' | translate}}</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#about">{{'about' | translate}}</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#projects">{{'projects' | translate}}</a>
-    </li>
-    <li class="nav-item ">
-      <a class="nav-link" [routerLink]="['/contact']">{{'contact' | translate}}</a>
-    </li>
-  </ul>
-</div>
-<div class=" navbar-collapse ">
-  <ul class="navbar-nav">
-    <li class=" nav-item">
-      <div class="optionbox">
-        <select class="selectpicker form-control  shadow" [(ngModel)]="selectedLanguage" (change)="changeLanguage()">
-          <option value="en">EN</option>
-          <option value="tr">TR</option>
-        </select>
-      </div>
-    </li>
-  </ul>
-</div>
-</nav>
+      <li class=" nav-item">
+        <div class="optionbox">
+          <select class="selectpicker form-control  shadow" [(ngModel)]="selectedLanguage" (change)="changeLanguage()">
+            <option value="en">EN</option>
+            <option value="tr">TR</option>
+          </select>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div> -->

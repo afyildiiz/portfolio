@@ -20,6 +20,7 @@ export class ContactmeComponent implements OnInit {
   isim!: string;
   e_mail!: string;
   mesaj!: string;
+  emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i;
 
 
   constructor(private fb:FormBuilder, private email: EmailService,private http:HttpClient) { }
@@ -29,11 +30,14 @@ export class ContactmeComponent implements OnInit {
 
     this.contactForm=this.fb.group({
       message: new FormControl("", Validators.required),
-      mail: new FormControl("", Validators.required),
+      mail: new FormControl("", [Validators.required,Validators.pattern(this.emailPattern)]),
       name: new FormControl("", Validators.required),
     })
   }
-
+  isValidEmail(email: string): boolean {
+    // E-posta regex deseni
+    return this.emailPattern.test(email);
+  }
 
   sendEmail(): void {
     const apiUrl = 'http://localhost:3000/api/send-email'; // Express API'nizin URL'sini buraya ekleyin
@@ -43,18 +47,23 @@ export class ContactmeComponent implements OnInit {
       message: this.mesaj
     };
 
-    this.http.post(apiUrl, payload).subscribe(
-      (response) => {
-        console.log('E-posta gönderildi:', response);
-        // Başarılı gönderim durumunu kullanıcıya bildirebilirsiniz
-      },
-      (error) => {
-        console.error('E-posta gönderilirken bir hata oluştu:', error);
-        // Hata durumunu kullanıcıya bildirebilirsiniz
-      }
+    if (this.isValidEmail(payload.email)) {
+      this.http.post(apiUrl, payload).subscribe(
+        (response) => {
+          console.log('E-posta gönderildi:', response);
+          // Başarılı gönderim durumunu kullanıcıya bildirebilirsiniz
+        },
+        (error) => {
+          console.error('E-posta gönderilirken bir hata oluştu:', error);
+          // Hata durumunu kullanıcıya bildirebilirsiniz
+        }
+        
+      );
+      this.contactForm.reset()
+    }else{
+      alert('Lütfen doğru email formatı giriniz!')
       
-    );
-    this.contactForm.reset()
+    }
   }
 
 

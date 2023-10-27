@@ -1,4 +1,4 @@
-<section style="color: white;margin-top: 2rem;" id="section">
+<section style="color: white;margin-top: 5rem;" id="section">
   <div class="row align-items-center">
     <div class="col-md-7">
       <div class="division text-center">
@@ -10,11 +10,35 @@
     </div>
 
     <div class="col-md-5 text-center"> 
-      <img src="../../../assets/AFY(3).png" style="height: auto; width: 250px;" alt="fatih_yildiz">
+      <img src="../../../assets/AFY(3).png" alt="fatih_yildiz">
     </div>
   </div>
 </section>
 
+
+
+<div class="row " style="padding: 50px">
+
+
+    <div class="social d-flex justify-content-center col-lg-12">
+      <a href="https://github.com/afyildiiz"  target="_blank">
+        <i class="fa-brands fa-github fa-4x icon-3d"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/afyildiiz/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-4x icon-3d"></i>
+      </a>
+      <a href="https://www.instagram.com/afyildiiz/" target="_blank">
+        <i class="fa-brands fa-instagram fa-4x icon-3d"></i>
+      </a>
+      <a target="_blank" href="https://medium.com/@afyildiiz">
+        <i class="fa-brands fa-medium fa-4x icon-3d"></i>
+      </a>
+      <!-- <a href="mailto:afyildiz@gmail.com?subject=&body=Merhaba,">
+        <i class="fa-sharp fa-solid fa-envelope fa-4x icon-3d"></i>
+      </a> -->
+    </div>
+  
+</div>
 
 
 <div  style="padding: 50px ;">
@@ -31,10 +55,10 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="inputbox ">
+          <div class="inputbox " >
             <input [(ngModel)]="e_mail" type="email " id="email" required="required" [ngModelOptions]="{standalone: true}" />
             <span>E-mail</span>
-            <small style="color: rgb(94, 1, 1);" class="form-text">{{'*The e-mail must be written in the correct format!' | translate}}</small>
+            <small *ngIf="e_mail && !isValidEmail(e_mail)" style="color: rgb(94, 1, 1);" class="form-text" id="smal">{{'*The e-mail must be written in the correct format!' | translate}}</small>
 
           </div>
         </div>
@@ -58,28 +82,3 @@
   </div>
 </div>
 
-
-
-<!-- 
-<div class="row " style="padding: 50px">
-
-
-    <div class="social d-flex justify-content-center col-lg-12">
-      <a href="https://github.com/afyildiiz"  target="_blank">
-        <i class="fa-brands fa-github fa-4x icon-3d"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/afyildiiz/" target="_blank">
-        <i class="fa-brands fa-linkedin fa-4x icon-3d"></i>
-      </a>
-      <a href="https://www.instagram.com/afyildiiz/" target="_blank">
-        <i class="fa-brands fa-instagram fa-4x icon-3d"></i>
-      </a>
-      <a target="_blank" href="https://medium.com/@afyildiiz">
-        <i class="fa-brands fa-medium fa-4x icon-3d"></i>
-      </a>
-      <a href="mailto:afyildiz@gmail.com?subject=&body=Merhaba,">
-        <i class="fa-sharp fa-solid fa-envelope fa-4x icon-3d"></i>
-      </a>
-    </div>
-  
-</div> -->

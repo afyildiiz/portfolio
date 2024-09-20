@@ -3,15 +3,35 @@
   <h4>{{'my sample projects' | translate}}</h4>
 </div>
 <div style="display: flex;justify-content:center;align-items:center" class="row">
+  <div class=" bot card col-lg-3">
+      <main>
+          <div class = "iyv card " (click)="openLink('https://github.com/afyildiiz/ai_tool_finder')">
+            <div class="card-content">
+              <h2>
+                {{'AI Tool Finder' | translate}} 
+              </h2>
+              <p>
+                {{'AI Tool Finder is a user-friendly web application that lets you discover the AI tools that best suit your needs.' | translate}}
+              </p>
+              <a href="#" class="button">
+                <!-- Find out more 
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span> -->
+              </a>
+            </div>
+          </div>
+        </main>
+  </div>
     <div class="bot card col-lg-3">
         <main>
-            <div class = "botas card">
+            <div class = "botas card" (click)="openLink('https://github.com/afyildiiz/e-commerce_final_project')">
               <div class="card-content ">
                 <h2 >
-                  {{'Clothe Management' | translate}}
+                  {{'Electronic E-commerce Site' | translate}}
                 </h2>
                 <p>
-                  {{'Clothing management system for BOTAŞ company. It contains CRUD and database operations, assign and many operations.' | translate}}
+                  {{'The project is designed to facilitate and enrich the lives of customers by providing reliable and innovative solutions in the field of electronics.' | translate}}
                 </p>
                 <a href="#" class="button">
                   <!-- Daha fazla 
@@ -23,28 +43,9 @@
             </div>
           </main>
     </div>
-    <div class=" bot card col-lg-3">
-        <main>
-            <div class = "iyv card ">
-              <div class="card-content">
-                <h2>
-                  {{'Donate App' | translate}} 
-                </h2>
-                <p>
-                  {{'Adding donor information, assigning donations and adding donation information, and finally viewing the donations made in the spreadsheet with all the details.' | translate}}                    </p>
-                <a href="#" class="button">
-                  <!-- Find out more 
-                  <span class="material-symbols-outlined">
-                    arrow_right_alt
-                  </span> -->
-                </a>
-              </div>
-            </div>
-          </main>
-    </div>
     <div class="card col-lg-3">
         <main>
-            <div class = "yds card ">
+            <div class = "yds card " (click)="openLink('https://github.com/afyildiiz/ydsdeneme')">
               <div class="card-content">
                 <h2>
                   {{'Exam Portal' | translate}} 

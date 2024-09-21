@@ -18,15 +18,23 @@
   .description{
   font-family: 'Press Start 2P', cursive;
     color: black;
+    text-align: center;
   }
 
-  @media screen and (max-width:672px) {
+  @media screen and (max-width:872px) {
     .description p{
       // padding: 24px;
       font-size: 12px;
       padding-left:10px;
       padding-right:10px;
       text-align: center;
+    }
+  }
+  @media screen and (max-width:550px) {
+    .description p{
+      // padding: 24px;
+      font-size: 9px;
+
     }
   }
   

@@ -1,52 +1,134 @@
-<body>
-  
-<div class="content">
-	<div class="profile-skills">
-		<div>
-			<input type="checkbox" id="sk1">
-			<label for="sk1"></label>
-			<ul class="skills skills1">
-				<li class="sk-cms"><span>CMS</span></li>
-				<li class="sk-dtb"><span>DDBB</span></li>
-				<li class="sk-dis"><span>Design</span></li>
-				<li class="sk-pro"><span>Programing</span></li>
-				<li class="sk-ani"><span>Animation</span></li>
-				<li class="more">
-					<input type="checkbox" id="more-con"><label for="more-con"></label>
-					<div><span>PHOTO</span><span>API</span><span>MAPS</span><span>VIDEO</span><span>CHARTS</span><span>RWD</span></div>
-				</li>
-			</ul>
-		</div>
-		<div>
-		<input type="checkbox" id="sk2">
-		<label for="sk2"></label>
-		<ul class="skills skills2">
-			<li class="sk-gim"><span>Gimp</span></li>
-			<li class="sk-ado"><span>Adobe&nbsp;CC</span></li>
-			<li class="sk-not"><span>Notepad++</span></li>
-			<li class="sk-tri"><span>Tridion</span></li>
-			<li class="sk-wor"><span>Wordpress</span></li>
-			<li class="more">
-				<input type="checkbox" id="more-pro"><label for="more-pro"></label>
-				<div><span>JOOMLA</span><span>DRUPAL</span><span>JIRA</span><span>TRELLO</span><span>FILEZILLA</span><span>GIT</span></div>
-			</li>
-		</ul>
-		</div>
-		<div>
-		<input type="checkbox" id="sk3">
-		<label for="sk3"></label>
-		<ul class="skills skills3">
-			<li class="sk-css"><span>CSS</span></li>
-			<li class="sk-htm"><span>HTML</span></li>
-			<li class="sk-jav"><span>JS</span></li>
-			<li class="sk-php"><span>PHP</span></li>
-			<li class="sk-sql"><span>SQL</span></li>
-			<li class="more">
-				<input type="checkbox" id="more-len"><label for="more-len"></label>
-				<div><span>XHTML</span><span>XSL</span><span>XML</span><span>JSON</span><span>PUG</span><span>SASS</span></div>
-			</li>
-		</ul>
-		</div>
+<div class="skills-section">
+	<div class="skills-header">
+		<h1>{{"Skills" | translate}}</h1>
 	</div>
+	<div class="skills-container">
+
+		<div class="skills-box" (click)="openLink('https://html.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-png-transparent.png" alt=""
+						class="skills-icons">
+				</div>
+				<h3>HTML 5</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+		
+
+		<div class="skills-box" (click)="openLink('https://www.w3.org/Style/CSS/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>CSS3</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P>    -->
+		</div>
+
+
+		<div class="skills-box" (click)="openLink('https://www.typescriptlang.org/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+						alt="" class="skills-icons">
+				</div>
+				<h3>TYPESCRIPT</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box" (click)="openLink('https://www.djangoproject.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>DJANGO</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box" (click)="openLink('https://flask.palletsprojects.com/en/3.0.x/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>FLASK</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box" (click)="openLink('https://angular.dev/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>ANGULAR</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box" (click)="openLink('https://cohere.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://logowik.com/content/uploads/images/cohere-new9011.logowik.com.webp" alt=""
+						class="skills-icons">
+				</div>
+				<h3>COHERE</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+		
+		<div class="skills-box" (click)="openLink('https://www.docker.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker-svgrepo-com.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>DOCKER</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box"  (click)="openLink('https://www.postgresql.org/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>POSTGRESQL</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box" (click)="openLink('https://www.mysql.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/MySQL_Dolphin.jpg" alt=""
+						class="skills-icons">
+				</div>
+				<h3>MYSQL</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+		<div class="skills-box text-center" (click)="openLink('https://git-scm.com/')">
+			<div class="skills-title">
+				<div class="skills-img">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png" alt=""
+						class="skills-icons">
+				</div>
+				<h3>GIT</h3>
+			</div>
+			<!-- <P> Lorem  Lorem  Lorem  </P> -->
+		</div>
+
+
+
+	</div>
+
 </div>
-</body>

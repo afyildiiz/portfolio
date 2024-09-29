@@ -136,6 +136,16 @@ main {
     transform: scale(1.1); /* 1.1 kat büyütme (çok az büyütme) */
   }
 }
+.movai{
+  background:url('../../../assets/movai.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  &:hover{
+    transition: 0.3s ease;
+    transform: scale(1.1); /* 1.1 kat büyütme (çok az büyütme) */
+  }
+}
 .yds{
   background:url('../../../assets/sinav2kurdu.png');
   background-repeat: no-repeat;

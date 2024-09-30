@@ -6,7 +6,6 @@ import { response } from 'express';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
 import { EmailService } from 'src/app/services/email.service';
-import { environment } from 'src/environments/environment';
 
 
 @Component({

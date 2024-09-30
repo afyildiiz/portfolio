@@ -9,6 +9,8 @@ CORS(app)
 
 load_dotenv()
 
+port = int(os.environ.get('PORT', 5000))
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True 
@@ -41,4 +43,4 @@ def send_email():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=port)

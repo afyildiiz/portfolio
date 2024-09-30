@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"            ],
+              "src/styles.scss",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"            
+            ],
             "scripts": []
           },
           "configurations": {
@@ -74,9 +76,13 @@
               "browserTarget": "portfolio:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "portfolio:build:development",
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
-        "extract-i18n": {
+        "extract-i18n": { 
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "portfolio:build"
@@ -95,7 +101,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"
             ],
             "scripts": []
           }

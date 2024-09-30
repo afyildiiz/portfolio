@@ -46,3 +46,7 @@ src/app.js
 
 # Local Netlify folder
 .netlify
+
+.env
+
+/backend/app.py

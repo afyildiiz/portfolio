@@ -15,11 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkillsComponent } from './comps/skills/skills.component';
 import { OtherComponent } from './comps/other/other.component';
 import { InfoComponent } from './comps/info/info.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +36,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     SkillsComponent,
     OtherComponent,
-    InfoComponent
+    InfoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -45,8 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-
-    
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
 
     TranslateModule.forRoot({
       loader: {

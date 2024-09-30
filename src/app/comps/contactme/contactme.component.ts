@@ -3,6 +3,7 @@ import { Visitor } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { response } from 'express';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
 import { EmailService } from 'src/app/services/email.service';
 import { environment } from 'src/environments/environment';
@@ -23,46 +24,47 @@ export class ContactmeComponent implements OnInit {
   emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i;
 
 
-  constructor(private fb:FormBuilder, private email: EmailService,private http:HttpClient) { }
+  constructor(private fb:FormBuilder, private email: EmailService,private http:HttpClient, private spinner:NgxSpinnerService) { }
 
+  
   ngOnInit(): void {
     // this.getMessages()
 
-    this.contactForm=this.fb.group({
-      message: new FormControl("", Validators.required),
-      mail: new FormControl("", [Validators.required,Validators.pattern(this.emailPattern)]),
-      name: new FormControl("", Validators.required),
-    })
+    this.contactForm = this.fb.group({
+      name: new FormControl("", Validators.required),  // isim
+      mail: new FormControl("", [Validators.required, Validators.pattern(this.emailPattern)]),  // e-posta
+      message: new FormControl("", Validators.required),  // mesaj
+    });
   }
+
+  
   isValidEmail(email: string): boolean {
     // E-posta regex deseni
     return this.emailPattern.test(email);
   }
 
-  sendEmail(): void {
-    const apiUrl = 'http://localhost:3000/api/send-email'; // Express API'nizin URL'sini buraya ekleyin
-    const payload = {
-      name: this.isim,
-      email: this.e_mail,
-      message: this.mesaj
-    };
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
+      console.log('Form data:', formData);  // Form verilerini kontrol edin
+      this.spinner.show()
 
-    if (this.isValidEmail(payload.email)) {
-      this.http.post(apiUrl, payload).subscribe(
-        (response) => {
-          console.log('E-posta gönderildi:', response);
-          // Başarılı gönderim durumunu kullanıcıya bildirebilirsiniz
+      this.http.post('/send-email', formData).subscribe(
+        response => {
+          this.isMailSent=true
+          this.contactForm.reset()
+          this.spinner.hide()
+          console.log('E-posta başarıyla gönderildi:', response);
         },
-        (error) => {
-          console.error('E-posta gönderilirken bir hata oluştu:', error);
-          // Hata durumunu kullanıcıya bildirebilirsiniz
+        error => {
+          this.isMailSent=false
+          this.spinner.hide()
+          console.error('E-posta gönderme hatası:', error);
+          alert("E-maıl can't send!")
         }
-        
       );
-      this.contactForm.reset()
-    }else{
-      alert('Lütfen doğru email formatı giriniz!')
-      
+    } else {
+      console.error('Form geçersiz, lütfen tüm alanları doldurun.');
     }
   }
 

@@ -4,7 +4,7 @@
   "proxyConfig": "proxy.config.json",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"cd C:/Users/afyil/Desktop/portfolio/src/ && node app.js\"",
+    "start": "concurrently \"ng serve\" \"flask run --app backend/app\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -27,6 +27,7 @@
     "bootstrap": "^5.3.0-alpha1",
     "firebase": "^10.4.0",
     "font-awesome": "^4.7.0",
+    "ngx-spinner": "^14.0.0",
     "nodemailer": "^6.9.4",
     "rxjs": "~7.5.0",
     "smtpjs": "^0.0.1",
@@ -38,7 +39,7 @@
     "@angular/cli": "~15.2.10",
     "@angular/compiler-cli": "^15.2.10",
     "@types/jasmine": "~4.0.0",
-    "concurrently": "^8.2.1",
+    "concurrently": "^8.2.2",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

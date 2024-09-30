@@ -46,17 +46,17 @@
     <div class="header">
         <h4 style="color: rgb(0, 0, 0)"><b>{{'send email' | translate}}</b></h4>
     </div>
-    <form  >
+    <form [formGroup]="contactForm" >
       <div class="row" style="margin-top: 2rem">
         <div class="col-lg-6">
           <div class="inputbox ">
-            <input [(ngModel)]="isim" type="text" required="required" [ngModelOptions]="{standalone: true}"/>
+            <input formControlName="name" type="text" required="required"/>
             <span>{{'Name' | translate}} </span>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="inputbox " >
-            <input [(ngModel)]="e_mail" type="email " id="email" required="required" [ngModelOptions]="{standalone: true}" />
+            <input formControlName="mail" type="email " id="email" required="required" />
             <span>E-mail</span>
             <small *ngIf="e_mail && !isValidEmail(e_mail)" style="color: rgb(94, 1, 1);" class="form-text" id="smal">{{'*The e-mail must be written in the correct format!' | translate}}</small>
 
@@ -68,16 +68,19 @@
         <div class="col-lg-12" style="padding: 10px">
           <div class="inputbox ">
             <textarea
-            [(ngModel)]="mesaj"
               type="text"
               required="required"
-              [ngModelOptions]="{standalone: true}"
+              formControlName="message"
             ></textarea>
             <span>{{'Your Message' | translate}}</span>
           </div>
         </div>
       </div>
-      <button type="button" (click)="sendEmail()" class="btn btn-primary" style="float:right" >{{'send email' | translate}}</button>
+      <button *ngIf="!isMailSent" type="button" (click)="onSubmit()" class="btn btn-primary" style="float:right" >{{'send email' | translate}}</button>
+      <div *ngIf="isMailSent" class="succes-message">
+        <h5 class="text-center" style="color: rgb(0, 255, 0);">Mail Sent Succesfully!</h5>
+      </div>
+      <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
     </form>
   </div>
 </div>

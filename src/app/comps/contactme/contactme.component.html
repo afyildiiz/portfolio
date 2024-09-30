@@ -78,7 +78,7 @@
       </div>
       <button *ngIf="!isMailSent" type="button" (click)="onSubmit()" class="btn btn-primary" style="float:right" >{{'send email' | translate}}</button>
       <div *ngIf="isMailSent" class="succes-message">
-        <h5 class="text-center" style="color: rgb(0, 255, 0);">Mail Sent Succesfully!</h5>
+        <h5 class="text-center">Mail Sent Succesfully!</h5>
       </div>
       <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
     </form>

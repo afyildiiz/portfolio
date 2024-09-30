@@ -48,5 +48,3 @@ src/app.js
 .netlify
 
 .env
-
-/backend/app.py
